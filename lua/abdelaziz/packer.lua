@@ -18,9 +18,9 @@ return require("packer").startup(function(use)
     use('nvim-treesitter/playground')
     use 'neovim/nvim-lspconfig'
 
-    use({ 'rose-pine/neovim', as = 'rose-pine' })
-
-    vim.cmd('colorscheme rose-pine')
+    -- use({ 'rose-pine/neovim', as = 'rose-pine' })
+    --
+    -- vim.cmd('colorscheme rose-pine')
 
     use('ThePrimeagen/harpoon')
 
@@ -30,6 +30,7 @@ return require("packer").startup(function(use)
     use('christoomey/vim-tmux-navigator')
 
     use { "catppuccin/nvim", as = "catppuccin" }
+    vim.cmd('colorscheme catppuccin')
 
     use "rafamadriz/friendly-snippets"
     use
@@ -43,14 +44,14 @@ return require("packer").startup(function(use)
         branch = 'v2.x',
         requires = {
             -- LSP Support
-            { 'neovim/nvim-lspconfig' },  -- Required
-            { 'williamboman/mason.nvim' }, -- Optional
+            { 'neovim/nvim-lspconfig' },             -- Required
+            { 'williamboman/mason.nvim' },           -- Optional
             { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
             -- Autocompletion
-            { 'hrsh7th/nvim-cmp' }, -- Required
+            { 'hrsh7th/nvim-cmp' },     -- Required
             { 'hrsh7th/cmp-nvim-lsp' }, -- Required
-            { 'L3MON4D3/LuaSnip' }, -- Required
+            { 'L3MON4D3/LuaSnip' },     -- Required
         }
     }
 
@@ -83,4 +84,6 @@ return require("packer").startup(function(use)
             }
         end,
     })
+    use { 'numToStr/Comment.nvim' }
+    use 'Exafunction/codeium.vim'
 end)
