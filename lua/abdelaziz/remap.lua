@@ -1,4 +1,3 @@
-
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>sv", vim.cmd.w)
@@ -23,10 +22,10 @@ end)
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- next greatest remap ever : asbjornHaland
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- This is going to get me cancelled
 vim.keymap.set("i", "<C-c>", "<Esc>")
@@ -51,8 +50,8 @@ vim.keymap.set("n", "<leader><leader>", function()
 end)
 
 -- Start Code actions
-vim.keymap.set({'i', 'n'}, "<C-a>", function ()
-     vim.lsp.buf.code_action()
+vim.keymap.set({ 'i', 'n' }, "<C-a>", function()
+    vim.lsp.buf.code_action()
 end)
 
 -- Flutter keymap
@@ -60,12 +59,15 @@ vim.keymap.set("n", "<leader>ff", vim.cmd.FlutterOutlineToggle)
 
 -- Toggle nvim trees
 vim.keymap.set('n', "<C-b>", vim.cmd.NvimTreeToggle)
---
---
---
---
---
---
---
--- 
 
+-- Codeium
+vim.keymap.set('i', '<C-g>', function() return vim.fn['codeium#Accept']() end, { expr = true })
+vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
+vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
+vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
+--
+--
+--
+--
+--
+--

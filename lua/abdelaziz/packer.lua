@@ -84,6 +84,12 @@ return require("packer").startup(function(use)
             }
         end,
     })
+    fun
     use { 'numToStr/Comment.nvim' }
-    use 'Exafunction/codeium.vim'
+    use {
+        'Exafunction/codeium.vim',
+        -- config = function()
+        --     -- Change '<C-g>' here to any keycode you like.
+        -- end
+    }
 end)
