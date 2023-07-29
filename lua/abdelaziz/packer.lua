@@ -84,12 +84,8 @@ return require("packer").startup(function(use)
             }
         end,
     })
-    fun
     use { 'numToStr/Comment.nvim' }
-    use {
-        'Exafunction/codeium.vim',
-        -- config = function()
-        --     -- Change '<C-g>' here to any keycode you like.
-        -- end
-    }
+    use { 'Exafunction/codeium.vim' }
+
+    use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
 end)

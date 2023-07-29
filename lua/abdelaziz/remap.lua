@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+-- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>sv", vim.cmd.w)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -58,7 +58,7 @@ end)
 vim.keymap.set("n", "<leader>ff", vim.cmd.FlutterOutlineToggle)
 
 -- Toggle nvim trees
-vim.keymap.set('n', "<C-b>", vim.cmd.NvimTreeToggle)
+vim.keymap.set('n', "<leader>pv", vim.cmd.NvimTreeToggle)
 
 -- Codeium
 vim.keymap.set('i', '<C-g>', function() return vim.fn['codeium#Accept']() end, { expr = true })
