@@ -1,6 +1,5 @@
 
 vim.g.mapleader = " "
-
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>sv", vim.cmd.w)
 
@@ -51,3 +50,23 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
+-- Start Code actions
+vim.keymap.set({'i', 'n'}, "<C-a>", function ()
+     vim.lsp.buf.code_action()
+end)
+
+-- Flutter keymap
+vim.keymap.set("n", "<leader>ff", vim.cmd.FlutterOutlineToggle)
+
+-- Toggle nvim trees
+vim.keymap.set('n', "<C-b>", vim.cmd.NvimTreeToggle)
+--
+--
+--
+--
+--
+--
+--
+-- 
+
