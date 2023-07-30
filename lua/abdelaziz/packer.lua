@@ -87,5 +87,5 @@ return require("packer").startup(function(use)
     use { 'numToStr/Comment.nvim' }
     use { 'Exafunction/codeium.vim' }
 
-    use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
+    -- use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
 end)
