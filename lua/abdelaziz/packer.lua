@@ -92,7 +92,7 @@ return require("packer").startup(function(use)
     -- Golang setup
     use {
         "ray-x/go.nvim",
-        dependencies = {     -- optional packages
+        dependencies = { -- optional packages
             "ray-x/guihua.lua",
             "neovim/nvim-lspconfig",
             "nvim-treesitter/nvim-treesitter",
@@ -102,6 +102,10 @@ return require("packer").startup(function(use)
         end,
         event = { "CmdlineEnter" },
         ft = { "go", 'gomod' },
-        build = ':lua require("go.install").update_all_sync()'     -- if you need to install/update all binaries
+        build = ':lua require("go.install").update_all_sync()' -- if you need to install/update all binaries
     }
+
+    -- Markdown preview
+    use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install",
+        setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 end)
