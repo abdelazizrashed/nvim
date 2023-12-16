@@ -25,6 +25,10 @@ local i = ls.insert_node
 -- local parse = require("luasnip.util.parser").parse_snippet
 -- local ms = ls.multi_snippet
 -- local k = require("luasnip.nodes.key_indexer").new_key
+--
+
+ls.filetype_extend("javascript", { "javascriptreact" })
+ls.filetype_extend("javascript", { "html" })
 
 ls.add_snippets("all", {
     s("todo", {
