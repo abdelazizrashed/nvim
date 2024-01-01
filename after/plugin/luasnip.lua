@@ -58,8 +58,8 @@ await excuteBlocAndHandleError(
     ls.parser.parse_snippet({ trig = "blocinit" },
         [[
 
-part '${1:name/downcase/}_event.dart';
-part '${1:name/downcase/}_state.dart';
+part '';
+part '';
 
 class ${1:name}Bloc extends Bloc<${1:name}Event, ${1:name}State> {
     static ${1:name}Bloc of(BuildContext context) =>
@@ -87,7 +87,7 @@ BlocProvider(
     ),
     ls.parser.parse_snippet({ trig = "blocstate" },
         [[
-part of '${1:name}_bloc.dart';
+part of '';
 
 abstract class ${1:name}State extends Equatable {
   const ${1:name}State();
@@ -130,7 +130,7 @@ class ${1:name}NetworkConnectionError extends ${1:name}State {
     ),
     ls.parser.parse_snippet({ trig = "blocevent" },
         [[
-part of '${1:name}_bloc.dart';
+part of '';
 
 abstract class ${1:name}Event extends Equatable {
   const ${1:name}Event();
@@ -143,6 +143,17 @@ abstract class ${1:name}Event extends Equatable {
     ),
     ls.parser.parse_snippet({ trig = "blocstatesuccess" },
         [[
+
+part of '';
+
+abstract class ${1:name}State extends Equatable {
+  const ${1:name}State();
+
+  @override
+  List<Object> get props => [];
+}
+
+class ${1:name}Initial extends ${1:name}State {}
 class ${1:name}Loading extends ${1:name}State {}
 
 class ${1:name}Success extends ${1:name}State {
