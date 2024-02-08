@@ -51,8 +51,8 @@ await excuteBlocAndHandleError(
     if (!model.success) return;
     emit(${1:name}Loaded(model.data!));
   },
-  onError: (msg) => ${1:name}Error(msg),
-  onNetwork: (msg) => ${1:name}NetworkConnectionError(msg),
+  onError: (msg) => emit(${1:name}Error(msg)),
+  onNetwork: (msg) => emit(${1:name}NetworkConnectionError(msg)),
 );]]
     ),
     ls.parser.parse_snippet({ trig = "blocinit" },

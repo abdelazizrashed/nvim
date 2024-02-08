@@ -117,4 +117,12 @@ return require("packer").startup(function(use)
     use { 'akinsho/git-conflict.nvim', tag = "*", config = function()
         require('git-conflict').setup()
     end }
+    use {
+        "windwp/nvim-ts-autotag",
+        config = function() require('git-conflict').setup() end
+    }
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
 end)
