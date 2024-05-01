@@ -27,7 +27,10 @@ return require("packer").startup(function(use)
     use("mbbill/undotree")
     use("tpope/vim-fugitive")
 
-    use('christoomey/vim-tmux-navigator')
+    use {
+        'christoomey/vim-tmux-navigator',
+        lazy = false
+    }
 
     use { "catppuccin/nvim", as = "catppuccin" }
     vim.cmd('colorscheme catppuccin')
