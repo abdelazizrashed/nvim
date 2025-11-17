@@ -26,6 +26,15 @@ return require("packer").startup(function(use)
 
     use("mbbill/undotree")
     use("tpope/vim-fugitive")
+    use 'tpope/vim-rails'
+    use 'andymass/vim-matchup'
+    use {
+        'mfussenegger/nvim-dap',
+        requires = {
+            "suketa/nvim-dap-ruby"
+
+        }
+    }
 
     use {
         'christoomey/vim-tmux-navigator',

@@ -91,6 +91,7 @@ vim.filetype.add({
         ["Fastfile"] = "ruby",
         ["Gemfile"] = "ruby",
         ["Appfile"] = "ruby",
+        ["Matchfile"] = "ruby",
         ["Podfile"] = "ruby",
         ["Pluginfile"] = "ruby",
     }
